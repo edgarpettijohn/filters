@@ -36,7 +36,7 @@ BEGIN {
 	ARGC = 0
 	FS = "|"
 	OFS = FS
-	version = 0.5
+	version = 0.4
 	allowed = 3
 	logit("starting...")
 	system("rm /tmp/authban")
