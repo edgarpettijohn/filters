@@ -55,7 +55,7 @@ BEGIN {
 	ARGC = 0
 	FS = "|"
 	OFS = FS
-	version = 0.5
+	version = 0.4
 	if (!length(blacklist))
 		die(usage())
 	logit("filter-dnsbl: starting...")
@@ -75,7 +75,7 @@ BEGIN {
 	src = $9
 
 	if (lookup(src)) {
-		logit("rejecting connection from: "src)
+		logit("filter-dnsbl: rejecting connection from: "src)
 		print "filter-result|" token "|" sid "|reject|550 go away"
 	} else {
 		print "filter-result|" token "|" sid "|proceed"
