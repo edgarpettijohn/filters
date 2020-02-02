@@ -68,7 +68,6 @@ BEGIN {
 	FS = "|"
 	OFS = FS
 	version = 0.4
-	print blacklist
 	if (!length(blacklist))
 		die(usage())
 	logit("filter-dnsbl: starting...")
